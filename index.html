@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinder Studio</title>
+    <meta name="description" content="Blinder Studio is a personal command-line tool that schedules YouTube Shorts uploads from the developer's own laptop.">
+    <!-- Google Search Console verification: replace the content below with the
+         token Google gives you after adding the property at
+         https://search.google.com/search-console (Domain or URL prefix). -->
+    <meta name="google-site-verification" content="REPLACE_WITH_VERIFICATION_TOKEN">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="/" class="brand">Blinder Studio</a>
+            <nav>
+                <a href="/" class="active">Home</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Blinder Studio</h1>
+        <p class="lead">
+            A personal command-line tool that schedules YouTube Shorts uploads from the
+            developer's own laptop. Single user, single machine, no hosted service.
+        </p>
+
+        <h2>What it does</h2>
+        <p>
+            Blinder Studio runs once a night on the developer's laptop. For each YouTube
+            brand channel the developer owns, it produces a short-form video locally
+            (script generation, voice synthesis, stock footage assembly via FFmpeg) and
+            uploads it to YouTube with a future <code>publishAt</code> time so the video
+            appears on the channel the next day.
+        </p>
+
+        <h2>Who can use it</h2>
+        <p>
+            Only the developer who runs the source code locally. There is no signup,
+            no public deployment, no shared instance. The OAuth client is configured
+            for the developer's own Google account, which owns the YouTube brand
+            channels the tool uploads to.
+        </p>
+
+        <h2>What data it touches</h2>
+        <ul>
+            <li>
+                <strong>OAuth refresh tokens</strong> for the YouTube Data API
+                <code>youtube.upload</code> scope. Stored locally on the developer's
+                laptop in plain JSON files inside a <code>credentials/</code>
+                directory that never leaves the machine.
+            </li>
+            <li>
+                <strong>Video metadata</strong> (title, description, tags, publish time)
+                generated on the laptop and sent only to YouTube as part of each upload.
+            </li>
+        </ul>
+        <p>
+            See the <a href="privacy.html">Privacy Policy</a> for the full description,
+            including how data is used, retained, and how to revoke access.
+        </p>
+
+        <h2>Distribution</h2>
+        <p>
+            Blinder Studio is a personal automation maintained by its developer for
+            their own YouTube channels. It is not offered as a hosted service, a
+            downloadable product, or a public installation.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Maintainer: Rodrigo Bittencourt &mdash;
+            <a href="mailto:rodrigo9cb70@gmail.com">rodrigo9cb70@gmail.com</a>
+        </p>
+    </main>
+
+    <footer>
+        Blinder Studio &middot;
+        <a href="/">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+    </footer>
+</body>
+</html>
